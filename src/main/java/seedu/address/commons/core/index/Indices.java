@@ -2,6 +2,8 @@ package seedu.address.commons.core.index;
 
 import seedu.address.commons.util.ToStringBuilder;
 
+import java.util.Arrays;
+
 /**
  * Represents a zero-based or one-based list of indices.
  *
@@ -13,7 +15,7 @@ public class Indices {
      * Indices can only be created by calling {@link Indices#fromZeroBased(int[])} or
      * {@link Indices#fromOneBased(int[])}.
      */
-    private Indices(int[] zeroBasedIndices) {
+    Indices(int[] zeroBasedIndices) {
         for (int i = 0; i < zeroBasedIndices.length; i++) {
             if (zeroBasedIndices[i] < 0) {
                 throw new IndexOutOfBoundsException();
@@ -64,11 +66,22 @@ public class Indices {
         }
 
         Indices otherIndex = (Indices) other;
-        return zeroBasedIndices == otherIndex.zeroBasedIndices;
+        return Arrays.equals(zeroBasedIndices, otherIndex.zeroBasedIndices);
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).add("zeroBasedIndices", zeroBasedIndices).toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < zeroBasedIndices.length; i++) {
+            sb.append(zeroBasedIndices[i]);
+            if (i < zeroBasedIndices.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return new ToStringBuilder(this)
+                .add("zeroBasedIndices", sb.toString())
+                .toString();
     }
 }
