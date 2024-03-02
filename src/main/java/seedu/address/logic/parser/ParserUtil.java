@@ -2,11 +2,10 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 import seedu.address.commons.core.index.Index;
+import seedu.address.commons.core.index.Indices;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.person.Address;
@@ -21,6 +20,7 @@ import seedu.address.model.tag.Tag;
 public class ParserUtil {
 
     public static final String MESSAGE_INVALID_INDEX = "Index is not a non-zero unsigned integer.";
+    public static final String MESSAGE_INVALID_INDICES = "Indices is not a non-zero unsigned integer.";
 
     /**
      * Parses {@code oneBasedIndex} into an {@code Index} and returns it. Leading and trailing whitespaces will be
@@ -33,6 +33,35 @@ public class ParserUtil {
             throw new ParseException(MESSAGE_INVALID_INDEX);
         }
         return Index.fromOneBased(Integer.parseInt(trimmedIndex));
+    }
+
+    public static Indices parseIndices(String oneBasedIndices) throws ParseException {
+//        String input = "10,20,30,40,50,abc"; // Example input string
+
+        List<Integer> integerList = new ArrayList<>();
+
+        // Split the input string based on commas
+        String[] tokens = oneBasedIndices.split(",");
+
+        // Iterate over each token
+        for (String token : tokens) {
+            try {
+                // Convert the token to an integer
+                int num = Integer.parseInt(token.trim());
+
+                // Add the integer to the list
+                integerList.add(num);
+            } catch (NumberFormatException e) {
+                throw new ParseException(MESSAGE_INVALID_INDICES);
+            }
+        }
+
+        int[] intArray = new int[integerList.size()];
+        for (int i = 0; i < integerList.size(); i++) {
+            intArray[i] = integerList.get(i);
+        }
+
+        return Indices.fromOneBased(intArray);
     }
 
     /**

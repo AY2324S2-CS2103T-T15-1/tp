@@ -48,4 +48,24 @@ public class Messages {
         return builder.toString();
     }
 
+    /**
+     * Formats the {@code person} for display to the user for a list of persons.
+     */
+    public static String format(Person[] persons) {
+        final StringBuilder builder = new StringBuilder();
+        for (Person person : persons) {
+            builder.append(person.getName())
+                    .append("; Phone: ")
+                    .append(person.getPhone())
+                    .append("; Email: ")
+                    .append(person.getEmail())
+                    .append("; Address: ")
+                    .append(person.getAddress())
+                    .append("; Tags: ");
+            person.getTags().forEach(builder::append);
+            builder.append("\n");
+        }
+        return builder.toString();
+    }
+
 }
