@@ -17,19 +17,18 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](https://github.com/alfaloo)]
 [[portfolio](https://github.com/alfaloo/CV/blob/main/Zhiyang_Lu_Resume.pdf)]
 
-* Role: Deliverables and Deadline / Integration
-* Responsibilities: Ensure project deliverables are done on time and in the right format. In charge of versioning of the code, maintaining the code repository, integrating various parts of the software to create a whole.
+- Role: Deliverables and Deadline / Integration
+- Responsibilities: Ensure project deliverables are done on time and in the right format. In charge of versioning of the code, maintaining the code repository, integrating various parts of the software to create a whole.
 
 ### Cheng-Yu Dong
 
 <img src="images/officialchengyud.png" width="200px">
 
-
 [[github](https://github.com/officialchengyud)]
 [[portfolio](www.linkedin.com/in/dongchengyu)]
 
-* Role: Code Quality / Integration
-* Responsibilities: Looks after code quality, ensures adherence to coding standards, etc. In charge of versioning of the code, maintaining the code repository, integrating various parts of the software to create a whole.
+- Role: Code Quality / Integration
+- Responsibilities: Looks after code quality, ensures adherence to coding standards, etc. In charge of versioning of the code, maintaining the code repository, integrating various parts of the software to create a whole.
 
 ### Lim Jia Wei
 
@@ -37,18 +36,18 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 [[github](http://github.com/Kappaccinoh)] [[portfolio](https://www.linkedin.com/in/jia-wei-lim-747037181/)]
 
-* Role: Scheduling / Testing
-* Responsibilities: Ensures the testing of the project is done properly and on time. In charge of defining, assigning, and tracking project tasks.
+- Role: Scheduling / Testing
+- Responsibilities: Ensures the testing of the project is done properly and on time. In charge of defining, assigning, and tracking project tasks.
 
-### Jean Doe
+### Eugene Luke Sim Ek Jin
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/alteqa.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/alteqa)]
+[[portfolio](https://www.linkedin.com/in/eugene-sim-866677188/)]
 
-* Role: Developer
-* Responsibilities: Dev Ops + Threading
+- Role: Documentation / Testing / Intellij, Github Expert
+- Responsibilities: Enrsure documentation is done comprehensively and in the right format. In charge of all Intellij and Github help. Ensuring testing on project is done properly and on time.
 
 ### James Doe
 
@@ -57,5 +56,5 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](http://github.com/johndoe)]
 [[portfolio](team/johndoe.md)]
 
-* Role: Developer
-* Responsibilities: UI
+- Role: Developer
+- Responsibilities: UI
