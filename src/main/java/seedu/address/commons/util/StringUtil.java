@@ -38,6 +38,19 @@ public class StringUtil {
                 .anyMatch(preppedWord::equalsIgnoreCase);
     }
 
+    public static boolean containsSubstringIgnoreCase(String sentence, String substring) {
+        requireNonNull(sentence);
+        requireNonNull(substring);
+
+        String preppedSubstring = substring.trim();
+        checkArgument(!preppedSubstring.isEmpty(), "Substring parameter cannot be empty");
+
+        String preppedSentence = sentence.toLowerCase();
+        String preppedSubstringLower = preppedSubstring.toLowerCase();
+
+        return preppedSentence.contains(preppedSubstringLower);
+    }
+
     /**
      * Returns a detailed message of the t, including the stack trace.
      */
