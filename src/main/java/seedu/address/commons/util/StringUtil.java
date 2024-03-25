@@ -38,6 +38,15 @@ public class StringUtil {
                 .anyMatch(preppedWord::equalsIgnoreCase);
     }
 
+    /**
+     * Checks if the given sentence contains the specified substring, ignoring case.
+     *
+     * @param sentence  The sentence to search within.
+     * @param substring The substring to search for.
+     * @return True if the sentence contains the substring, ignoring case; false otherwise.
+     * @throws NullPointerException     if either the sentence or the substring is null.
+     * @throws IllegalArgumentException if the substring parameter is empty.
+     */
     public static boolean containsSubstringIgnoreCase(String sentence, String substring) {
         requireNonNull(sentence);
         requireNonNull(substring);
